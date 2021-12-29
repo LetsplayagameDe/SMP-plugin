@@ -1,0 +1,20 @@
+name: Bubatz
+version: '${project.version}'
+main: de.bubatzsmp.Bubatz
+api-version: 1.17
+authors: [ Honey-Craft ]
+website: ${project.url}
+
+permissions:
+  bubatz.realease:
+    default: op
+
+commands:
+  release:
+    description: "Release Command"
+
+  schande:
+    description: "Schande Command"
+
+  spawn:
+    description: "Spawn Command"
