@@ -15,6 +15,7 @@ public class ReleaseCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender s, Command cmd, String label, String[] args) {
         if (s.hasPermission("bubatz.realease")) {
+
             Bukkit.getWorld("world").getWorldBorder().setSize(7500);
             Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', Bubatz.getBubatz().getConfig().getString("message.release")));
 
@@ -26,11 +27,13 @@ public class ReleaseCommand implements CommandExecutor {
                     p.playSound(p.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE_FAR, 1, 1);
                     p.playSound(p.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LARGE_BLAST_FAR, 1, 1);
                     p.setHealth(20);
+                    p.setFoodLevel(21);
                 }, 10L);
 
                 p.spawnParticle(Particle.TOTEM, p.getLocation(), 100);
                 p.sendTitle(ChatColor.translateAlternateColorCodes('&', Bubatz.getBubatz().getConfig().getString("message.title")), "");
             }
+
         }
 
         return true;

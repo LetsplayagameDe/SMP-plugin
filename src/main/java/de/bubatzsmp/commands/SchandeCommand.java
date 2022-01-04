@@ -17,7 +17,7 @@ public class SchandeCommand implements CommandExecutor {
                 OfflinePlayer target = Bukkit.getOfflinePlayer(args[0]);
 
                 if (target != null) {
-                    Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.schande"), target.getName())));
+                    Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.schande"), target.getPlayer().getDisplayName())));
 
                 } else
                     p.sendMessage(ChatColor.RED + "Spieler exestiert nicht welche schande");

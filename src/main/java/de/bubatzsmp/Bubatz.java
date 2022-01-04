@@ -33,14 +33,13 @@ public final class Bubatz extends JavaPlugin {
             getConfig().set("message.title", "&4Bubatz SMP Realeased!");
             getConfig().set("message.schande", "&2[SMP] &cSchande&2 geht raus an &c%S");
 
-            getConfig().set("spawn.x", 0);
-            getConfig().set("spawn.y", 0);
-            getConfig().set("spawn.z", 0);
+            getConfig().set("spawn.x", 0.0);
+            getConfig().set("spawn.y", 0.0);
+            getConfig().set("spawn.z", 0.0);
 
             saveConfig();
             reloadConfig();
         }
-
     }
 
 }
