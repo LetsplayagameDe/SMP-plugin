@@ -20,9 +20,9 @@ public class SchandeCommand implements CommandExecutor {
                     Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.schande"), target.getPlayer().getDisplayName())));
 
                 } else
-                    p.sendMessage(ChatColor.RED + "Spieler exestiert nicht welche schande");
+                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.unknown_player"))));
             } else
-                p.sendMessage(ChatColor.RED + "Benutzung: /schande <Spieler>");
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.usage.schande"))));
         }
 
         return true;
