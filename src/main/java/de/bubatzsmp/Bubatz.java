@@ -32,6 +32,7 @@ public final class Bubatz extends JavaPlugin {
             getConfig().set("message.release", "&bBubatz SMP wurde Released!");
             getConfig().set("message.title", "&4Bubatz SMP Realeased!");
             getConfig().set("message.schande", "&2[SMP] &cSchande&2 geht raus an &c%S");
+            getConfig().set("message.spawn", "&2[&6SMP&2] Du wirst in 5 sekunden Teleportiert!");
 
             getConfig().set("spawn.x", 0.0);
             getConfig().set("spawn.y", 0.0);
