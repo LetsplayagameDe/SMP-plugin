@@ -14,13 +14,14 @@ public class SchandeCommand implements CommandExecutor {
     public boolean onCommand(CommandSender s, Command cmd, String label, String[] args) {
         if (s instanceof Player p) {
             if (args.length == 1) {
-                OfflinePlayer target = Bukkit.getOfflinePlayer(args[0]);
-
+                //OfflinePlayer target = Bukkit.getOfflinePlayer(args[0]);
+                Player target = Bukkit.getPlayer(args[0]);
                 if (target != null) {
                     Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.schande"), target.getPlayer().getDisplayName())));
-
-                } else
+                }
+                else if (target == null) {
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.unknown_player"))));
+                }
             } else
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.usage.schande"))));
         }

@@ -31,7 +31,7 @@ public final class Bubatz extends JavaPlugin {
             getConfig().set("message.quitmessage", "&c%S ist BubatzSMP gelaved!");
             getConfig().set("message.release", "&bBubatz SMP wurde Released!");
             getConfig().set("message.title", "&4Bubatz SMP Realeased!");
-            getConfig().set("message.schande", "&2[SMP] &cSchande&2 geht raus an &c%S");
+            getConfig().set("message.schande", "&2[&6SMP&2] &cSchande&2 geht raus an &c%S");
             getConfig().set("message.spawn", "&2[&6SMP&2] Du wirst in 5 sekunden Teleportiert!");
             getConfig().set("message.unknown_player", "&cSpieler exestiert nicht welche schande");
             getConfig().set("message.usage.schande", "&cBenutzung: /schande <Spieler>");
