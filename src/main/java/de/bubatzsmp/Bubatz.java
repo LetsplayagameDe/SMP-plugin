@@ -35,7 +35,6 @@ public final class Bubatz extends JavaPlugin {
             getConfig().set("message.spawn", "&2[&6SMP&2] Du wirst in 5 sekunden Teleportiert!");
             getConfig().set("message.unknown_player", "&cSpieler exestiert nicht welche schande");
             getConfig().set("message.usage.schande", "&cBenutzung: /schande <Spieler>");
-
             getConfig().set("spawn.x", 0.0);
             getConfig().set("spawn.y", 0.0);
             getConfig().set("spawn.z", 0.0);
