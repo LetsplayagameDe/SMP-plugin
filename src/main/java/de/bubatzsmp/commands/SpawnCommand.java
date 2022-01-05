@@ -19,7 +19,7 @@ public class SpawnCommand implements CommandExecutor {
                     Bubatz.getBubatz().getConfig().getDouble("spawn.z")
             };
 
-            p.sendMessage(ChatColor.DARK_GREEN + "[" + ChatColor.GOLD + "SMP" + ChatColor.DARK_GREEN  +"]" + ChatColor.DARK_GREEN + "Du wirst in 5 sekunden Teleportiert!");
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', Bubatz.getBubatz().getConfig().getString("message.spawn")));
 
             Bukkit.getScheduler().runTaskLater(Bubatz.getBubatz(), () -> p.teleport(new Location(Bukkit.getWorld("world"), coords[0], coords[1], coords[2])), 100);
         }
