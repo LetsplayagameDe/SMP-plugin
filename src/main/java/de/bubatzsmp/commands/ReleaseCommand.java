@@ -31,7 +31,7 @@ public class ReleaseCommand implements CommandExecutor {
                 }, 10L);
 
                 p.spawnParticle(Particle.TOTEM, p.getLocation(), 100);
-                p.sendTitle(ChatColor.translateAlternateColorCodes('&', Bubatz.getBubatz().getConfig().getString("message.title")), "");
+                p.sendTitle(ChatColor.translateAlternateColorCodes('&', Bubatz.getBubatz().getConfig().getString("message.title")), "", 10, 70, 20);
             }
 
         }

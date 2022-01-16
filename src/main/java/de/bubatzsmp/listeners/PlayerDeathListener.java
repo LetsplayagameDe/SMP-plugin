@@ -12,12 +12,9 @@ public class PlayerDeathListener implements Listener {
 
     @EventHandler
     private void onPlayerDeath(PlayerDeathEvent e) {
-        if (e.getEntity() instanceof Player) {
-            Player p = e.getEntity().getPlayer();
-            p.sendMessage(String.format(ChatColor.translateAlternateColorCodes('&', Bubatz.getBubatz().getConfig().getString("message.death")), p.getLocation().getBlockX() + " " + p.getLocation().getBlockY() + " " + p.getLocation().getBlockZ()));
-            Schande.sendSchandeFromServer(p);
-        }
-
+        Player p = e.getEntity().getPlayer();
+        p.sendMessage(String.format(ChatColor.translateAlternateColorCodes('&', Bubatz.getBubatz().getConfig().getString("message.death")), p.getLocation().getBlockX() + " " + p.getLocation().getBlockY() + " " + p.getLocation().getBlockZ()));
+        Schande.sendSchandeFromServer(p);
     }
 
 }
