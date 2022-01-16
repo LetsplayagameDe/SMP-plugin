@@ -13,7 +13,7 @@ public class PlayerDeathListener implements Listener {
     private void onPlayerDeath(PlayerDeathEvent e) {
         if (e.getEntity() instanceof Player) {
             Player p = e.getEntity().getPlayer();
-            p.sendMessage(ChatColor.DARK_GREEN + "[" + ChatColor.GOLD + "SMP" + ChatColor.DARK_GREEN + "]" + ChatColor.RED + "Death Coordinates: " + p.getLocation().getBlockX() + " " + p.getLocation().getBlockY() + " " + p.getLocation().getBlockZ() + " .");
+            p.sendMessage(String.format(ChatColor.translateAlternateColorCodes('&', Bubatz.getBubatz().getConfig().getString("message.death")), p.getLocation().getBlockX() + " " + p.getLocation().getBlockY() + " " + p.getLocation().getBlockZ()));
         }
 
     }
