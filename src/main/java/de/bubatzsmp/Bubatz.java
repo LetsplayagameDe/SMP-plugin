@@ -4,6 +4,7 @@ import de.bubatzsmp.commands.ReleaseCommand;
 import de.bubatzsmp.commands.SchandeCommand;
 import de.bubatzsmp.commands.SpawnCommand;
 import de.bubatzsmp.listeners.JoinListener;
+import de.bubatzsmp.listeners.PlayerDeathListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,6 +20,7 @@ public final class Bubatz extends JavaPlugin {
     public void onEnable() {
         saveConfig();
         Bukkit.getPluginManager().registerEvents(new JoinListener(), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerDeathListener(), this);
 
         getCommand("release").setExecutor(new ReleaseCommand());
         getCommand("schande").setExecutor(new SchandeCommand());
