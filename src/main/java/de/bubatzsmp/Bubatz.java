@@ -6,7 +6,6 @@ import de.bubatzsmp.commands.SpawnCommand;
 import de.bubatzsmp.listeners.JoinListener;
 import de.bubatzsmp.listeners.PlayerDeathListener;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Bubatz extends JavaPlugin {

@@ -18,8 +18,7 @@ public class SchandeCommand implements CommandExecutor {
                 Player target = Bukkit.getPlayer(args[0]);
                 if (target != null) {
                     Schande.sendSchande(sender, target);
-                }
-                else if (target == null) {
+                } else if (target == null) {
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', String.format(Bubatz.getBubatz().getConfig().getString("message.unknown_player"))));
                 }
             } else

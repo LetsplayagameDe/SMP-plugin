@@ -1,10 +1,10 @@
 package de.bubatzsmp.util;
 
-import org.bukkit.Location;
-
 import java.io.Serializable;
 
-public class Vector <T extends Number> implements Serializable {
+import static org.bukkit.util.NumberConversions.square;
+
+public class Vector<T extends Number> implements Serializable {
 
     private final T x;
     private final T y;
@@ -28,6 +28,14 @@ public class Vector <T extends Number> implements Serializable {
         this.z = z;
     }
 
+    public double distance(Vector<T> vec) {
+        return Math.sqrt(
+                square(this.x.doubleValue() - vec.getX().doubleValue()) +
+                        square(this.y.doubleValue() - vec.getY().doubleValue()) +
+                        square(this.z.doubleValue() - vec.getZ().doubleValue())
+        );
+    }
+
     public T getX() {
         return x;
     }
@@ -46,5 +54,16 @@ public class Vector <T extends Number> implements Serializable {
 
     public float getPitch() {
         return pitch;
+    }
+
+    @Override
+    public Vector<T> clone() {
+        try {
+            return (Vector<T>) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }
