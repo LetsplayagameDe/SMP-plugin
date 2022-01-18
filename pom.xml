@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
     <url>https://bubatzpizzasmp.com</url>
 
-    <name>BubatzRealease</name>
+    <name>BubatzRelease</name>
 
     <properties>
         <java.version>17</java.version>
