@@ -29,8 +29,8 @@ public final class Bubatz extends JavaPlugin {
         main = this;
 
         if (!getConfig().contains("message.joinmessage")) {
-            getConfig().set("message.joinmessage", "&2%S ist BubatzSMP gejoint!");
-            getConfig().set("message.quitmessage", "&c%S ist BubatzSMP gelaved!");
+            getConfig().set("message.joinmessage", "&2%s ist BubatzSMP gejoint!");
+            getConfig().set("message.quitmessage", "&c%s ist BubatzSMP gelaved!");
             getConfig().set("message.release", "&bBubatz SMP wurde Released!");
             getConfig().set("message.title", "&4Bubatz SMP Realeased!");
             getConfig().set("message.schande", "&2[&6SMP&2] &cSchande&2 geht raus an &c%S");

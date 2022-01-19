@@ -17,6 +17,9 @@ public class Schande {
         }
         long schande = Bubatz.getBubatz().getConfig().getLong("Schande." + target.getUniqueId());
         Bubatz.getBubatz().getConfig().set("Schande." + target.getUniqueId().toString(), schande + 1);
+
+        Bubatz.getBubatz().saveConfig();
+        Bubatz.getBubatz().reloadConfig();
     }
 
     public static void sendSchandeFromServer(Player target) {
@@ -27,6 +30,9 @@ public class Schande {
         }
         long schande = Bubatz.getBubatz().getConfig().getLong("Schande." + target.getUniqueId());
         Bubatz.getBubatz().getConfig().set("Schande." + target.getUniqueId().toString(), schande + 1);
+
+        Bubatz.getBubatz().saveConfig();
+        Bubatz.getBubatz().reloadConfig();
     }
 
 }
