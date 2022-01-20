@@ -1,5 +1,6 @@
 package de.bubatzsmp;
 
+import de.bubatzsmp.commands.BedCommand;
 import de.bubatzsmp.commands.ReleaseCommand;
 import de.bubatzsmp.commands.SchandeCommand;
 import de.bubatzsmp.commands.SpawnCommand;
@@ -25,6 +26,7 @@ public final class Bubatz extends JavaPlugin {
         getCommand("release").setExecutor(new ReleaseCommand());
         getCommand("schande").setExecutor(new SchandeCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
+        getCommand("bed").setExecutor(new BedCommand());
 
         main = this;
 
@@ -38,6 +40,7 @@ public final class Bubatz extends JavaPlugin {
             getConfig().set("message.unknown_player", "&cSpieler exestiert nicht welche schande");
             getConfig().set("message.usage.schande", "&cBenutzung: /schande <Spieler>");
             getConfig().set("message.death", "&2[&6SMP&2] &cDeath Coordinates: %s");
+            getConfig().set("message.bed", "&c[&6SMP&2] &aDu wirst in 5 Sekunden zu deinem Bett teleportiert.");
             getConfig().set("spawn.x", 0.0);
             getConfig().set("spawn.y", 0.0);
             getConfig().set("spawn.z", 0.0);
